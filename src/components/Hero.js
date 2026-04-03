@@ -10,81 +10,89 @@ export default function Hero() {
       <div className="absolute inset-0">
         <img
           src="/NamoBg.webp"
-          alt="Car"
-          className="w-full h-full object-cover opacity-40"
+          alt="Namo Car Decor Pune"
+          className="w-full h-full object-cover opacity-50"
         />
       </div>
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 px-6 md:px-16 max-w-5xl">
-
-        {/* Tag */}
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-green-400 text-sm mt-4 tracking-wide"
-        >
-          PREMIUM CAR DECOR • PUNE
-        </motion.p>
+      <div className="relative z-10 px-6 md:px-16 max-w-5xl mt-10">
 
         {/* Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-extrabold leading-tight text-3xl md:text-7xl"
+          className="font-extrabold leading-tight text-3xl md:text-6xl sm:text-xl"
         >
-          Turn Your Car Into <br className="hidden sm:block" />
-          <span className="text-green-500">A Head-Turner</span>
+          Premium Car Accessories & <br className="hidden sm:block" />
+          <span className="text-green-500">
+            Same-Day Installation in Pune
+          </span>
         </motion.h1>
 
-        {/* Subtext */}
-        <motion.p
+        {/* Subtext (Now Sales-Oriented) */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-6 text-gray-300 text-lg max-w-xl"
+          className="mt-2 text-gray-300 text-base md:text-lg max-w-xl space-y-1"
         >
-          Seat covers, ambient lighting, audio upgrades & detailing —
-          everything your car needs to stand out on the road.
-        </motion.p>
+          <p>✔ Seat Covers from ₹3,999</p>
+          <p>✔ Ambient Lighting from ₹2,499</p>
+          <p>✔ Audio Systems & Car Detailing</p>
+          <p className="text-white font-medium mt-2">
+            Upgrade your car without overpaying.
+          </p>
+        </motion.div>
 
         {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-8 flex flex-wrap gap-4"
+          className="mt-4 flex flex-wrap gap-4"
         >
           <a
+            target="_blank" rel="noopener noreferrer"
             href="https://wa.me/91XXXXXXXXXX"
-            className="px-8 py-4 bg-green-500 text-black font-semibold rounded-xl hover:scale-105 transition"
+            className="px-8 py-4 bg-green-500 text-black font-semibold rounded-xl hover:scale-105 transition animate-pulse"
           >
-            💬 Get Quote on WhatsApp
+            💬 Get Instant Quote
           </a>
 
           <a
-            href="tel:YOUR_NUMBER"
-            className="px-8 py-4 border border-white/30 rounded-xl hover:bg-white hover:text-black transition"
+            href="tel:+91XXXXXXXXXX"
+            className="px-8 py-4 bg-white text-black font-semibold rounded-xl hover:bg-gray-200 transition"
           >
             📞 Call Now
           </a>
         </motion.div>
 
+        {/* Urgency Offer */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="text-sm text-gray-400 mt-3"
+        >
+          🔥 Limited Offer: Free Interior Cleaning with any service this week
+        </motion.p>
+
         {/* Trust Strip */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-8 flex gap-6 text-sm text-gray-400 flex-wrap"
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mt-8 flex gap-6 text-sm text-white flex-wrap"
         >
-          <span>✔ 100+ Cars Upgraded</span>
-          <span>✔ Same Day Service</span>
-          <span>✔ Undri / Handewadi</span>
+          <span>⭐ 4.8 Google Rating</span>
+          <span>📍 Handewadi, Pune</span>
+          <span>🚗 500+ Cars Modified</span>
+          <span>🕒 Same-Day Delivery</span>
         </motion.div>
 
       </div>

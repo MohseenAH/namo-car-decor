@@ -22,7 +22,7 @@ export default function Reviews() {
   ];
 
   return (
-    <section className="py-20 px-6 bg-neutral-900 text-white">
+    <section className="py-8 px-6 bg-[#0a0a0a]  text-white">
       <div className="max-w-6xl mx-auto">
 
         {/* Heading */}

@@ -1,5 +1,6 @@
 import BeforeAfter from "@/components/BeforeAfter";
 import Contact from "@/components/Contact";
+import FloatingCTA from "@/components/FloatingCTA";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
@@ -18,6 +19,7 @@ export default function Home() {
       <Reviews/>
       <Contact/>
       <Footer/>
+      <FloatingCTA/>
     </div>
   );
 }

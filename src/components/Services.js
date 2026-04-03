@@ -12,22 +12,21 @@ export default function Services() {
   const services = [
     {
       title: "Seat Covers",
-      desc: "Premium custom seat covers for comfort & style",
+      price: "Starting ₹3,999",
+      desc: "Premium leather & fabric seat covers with perfect fitting and long-lasting comfort.",
       img: "https://images.unsplash.com/photo-1629838978692-40a61bf66f7b?q=80&w=800",
+      popular: true,
     },
     {
       title: "Ambient Lighting",
-      desc: "LED lighting to transform your car interior",
+      price: "Starting ₹2,499",
+      desc: "Multi-color LED ambient lighting to give your car a luxury night vibe.",
       img: "https://images.unsplash.com/photo-1672870987157-9715da8c4a84?q=80&w=800",
     },
     {
-      title: "Audio Systems",
-      desc: "Powerful sound systems for better driving experience",
-      img: "https://images.unsplash.com/photo-1762628992471-77ab9965df8c?q=80&w=800",
-    },
-    {
       title: "Car Detailing",
-      desc: "Deep cleaning & polishing for showroom finish",
+      price: "Starting ₹1,999",
+      desc: "Deep interior & exterior cleaning for a fresh showroom-like finish.",
       img: "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?q=80&w=800",
     },
   ];
@@ -41,7 +40,7 @@ export default function Services() {
           Our Services
         </h2>
         <p className="text-gray-400 mt-4">
-          Upgrade your car with premium accessories & detailing
+          Affordable upgrades for your car — premium quality guaranteed
         </p>
       </div>
 
@@ -60,13 +59,20 @@ export default function Services() {
                 }
               }}
               className="
-                cursor-pointer rounded-xl overflow-hidden
+                relative cursor-pointer rounded-xl overflow-hidden
                 border border-white/10
                 hover:border-green-500/40
-                transition
-                bg-white/5 hover:scale-[1.02]
+                transition bg-white/5 hover:scale-[1.02]
               "
             >
+
+              {/* Popular Badge */}
+              {service.popular && (
+                <span className="absolute top-3 left-3 bg-green-500 text-black text-xs px-2 py-1 rounded">
+                  🔥 Most Popular
+                </span>
+              )}
+
               {/* Image */}
               <div className="overflow-hidden">
                 <img
@@ -82,6 +88,11 @@ export default function Services() {
                   {service.title}
                 </h3>
 
+                {/* Price */}
+                <p className="text-green-400 font-semibold mt-1">
+                  {service.price}
+                </p>
+
                 {/* Description */}
                 <div
                   className={`
@@ -94,11 +105,20 @@ export default function Services() {
                 >
                   {service.desc}
                 </div>
+
+                {/* CTA */}
+                <a
+                  href="https://wa.me/91XXXXXXXXXX"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-block text-sm bg-green-500 text-black px-4 py-2 rounded-lg hover:scale-105 transition"
+                >
+                  Get Quote →
+                </a>
               </div>
             </div>
           );
         })}
-
       </div>
 
     </section>
